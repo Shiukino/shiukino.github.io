@@ -74,15 +74,6 @@ body {
   margin-bottom: 20px;
 }
 
-.foto {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 15px;
-  display: block;
-  margin: 15px auto;
-}
-
 /* =========================
    FLORES
    ========================= */
