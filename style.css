@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(135deg, #fff1f8, #e8f8ff, #fffde8);
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #444;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+
+.contenedor {
+  width: 90%;
+  max-width: 700px;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   TARJETA
+   ========================= */
+
+.tarjeta {
+  background: rgba(255, 255, 255, 0.85);
+
+  padding: 50px 35px;
+
+  border-radius: 30px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  animation: aparecer 1.5s ease;
+}
+
+/* =========================
+   TITULOS
+   ========================= */
+
+.fecha {
+  font-size: 3rem;
+
+  color: #e88bb5;
+
+  margin-bottom: 10px;
+
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.titulo {
+  font-size: 2.8rem;
+
+  color: #75b798;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FLORES
+   ========================= */
+
+.flores {
+  font-size: 2.5rem;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 8px;
+}
+
+/* =========================
+   MENSAJE
+   ========================= */
+
+.mensaje {
+  font-size: 1.2rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+.destacado {
+  color: #e88bb5;
+
+  font-weight: bold;
+}
+
+/* =========================
+   BOTON
+   ========================= */
+
+button {
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 30px;
+
+  background: #e88bb5;
+
+  color: white;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d96c9d;
+
+  transform: scale(1.08);
+}
+
+/* =========================
+   MENSAJE OCULTO
+   ========================= */
+
+#mensajeOculto {
+  display: none;
+
+  margin-top: 25px;
+
+  font-size: 1.15rem;
+
+  color: #75a98c;
+
+  animation: aparecer 1s ease;
+}
+
+/* =========================
+   FLORES FLOTANTES
+   ========================= */
+
+.flor {
+  position: absolute;
+
+  font-size: 2rem;
+
+  animation: caer linear infinite;
+
+  opacity: 0.8;
+
+  pointer-events: none;
+}
+
+.flor:nth-child(1) {
+  left: 5%;
+  animation-duration: 8s;
+}
+
+.flor:nth-child(2) {
+  left: 20%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.flor:nth-child(3) {
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.flor:nth-child(4) {
+  left: 55%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+.flor:nth-child(5) {
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.flor:nth-child(6) {
+  left: 85%;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+/* =========================
+   CORAZONES
+   ========================= */
+
+.corazon {
+  position: fixed;
+
+  font-size: 1.5rem;
+
+  pointer-events: none;
+
+  animation: subir 1.5s ease-out forwards;
+}
+
+/* =========================
+   ANIMACIONES
+   ========================= */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes caer {
+  from {
+    top: -10%;
+
+    transform: rotate(0deg);
+  }
+
+  to {
+    top: 110%;
+
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes subir {
+  0% {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateY(-120px) scale(1.8);
+  }
+}
+
+/* =========================
+   CELULARES
+   ========================= */
+
+@media (max-width: 600px) {
+  .tarjeta {
+    padding: 40px 25px;
+  }
+
+  .fecha {
+    font-size: 2.2rem;
+  }
+
+  .titulo {
+    font-size: 2.1rem;
+  }
+
+  .flores {
+    font-size: 2rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+  }
+}
