@@ -270,10 +270,6 @@ button:hover {
   }
 }
 
-/* =========================
-   CELULARES
-   ========================= */
-
 @media (max-width: 600px) {
   .tarjeta {
     padding: 40px 25px;
